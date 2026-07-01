@@ -1,0 +1,160 @@
+{
+  "baseline_checks": 55,
+  "baseline_failures": 0,
+  "mutations": [
+    {
+      "fault": "unscoped-item",
+      "detected": true,
+      "failing_cases": 8,
+      "witness": {
+        "case": "mara/read/vale",
+        "request": "GET /claims/d3ca7323-cc89-4d32-a40a-754329113ae7",
+        "expected_status": 404,
+        "actual_status": 200,
+        "violations": [
+          "status",
+          "response body"
+        ],
+        "expected_body": {
+          "error": "not found"
+        },
+        "actual_body": {
+          "id": "d3ca7323-cc89-4d32-a40a-754329113ae7",
+          "owner": "vale",
+          "cents": 9100,
+          "purpose": "Airport transfer",
+          "status": "pending"
+        },
+        "observed_events": []
+      }
+    },
+    {
+      "fault": "unscoped-list",
+      "detected": true,
+      "failing_cases": 2,
+      "witness": {
+        "case": "mara/list/all",
+        "request": "GET /claims",
+        "expected_status": 200,
+        "actual_status": 200,
+        "violations": [
+          "response body"
+        ],
+        "expected_body": [
+          {
+            "id": "a391f982-7f70-4df2-9099-e8a040b70b4d",
+            "owner": "lee",
+            "cents": 16400,
+            "purpose": "Rail fare",
+            "status": "pending"
+          },
+          {
+            "id": "adf72f05-60b7-494d-846a-c96691ea6ee0",
+            "owner": "mara",
+            "cents": 7800,
+            "purpose": "Client lunch",
+            "status": "pending"
+          },
+          {
+            "id": "b6ea1a07-335e-44ca-8450-a332f5b36da0",
+            "owner": "oren",
+            "cents": 22500,
+            "purpose": "Hotel stay",
+            "status": "pending"
+          }
+        ],
+        "actual_body": [
+          {
+            "id": "a391f982-7f70-4df2-9099-e8a040b70b4d",
+            "owner": "lee",
+            "cents": 16400,
+            "purpose": "Rail fare",
+            "status": "pending"
+          },
+          {
+            "id": "adf72f05-60b7-494d-846a-c96691ea6ee0",
+            "owner": "mara",
+            "cents": 7800,
+            "purpose": "Client lunch",
+            "status": "pending"
+          },
+          {
+            "id": "b6ea1a07-335e-44ca-8450-a332f5b36da0",
+            "owner": "oren",
+            "cents": 22500,
+            "purpose": "Hotel stay",
+            "status": "pending"
+          },
+          {
+            "id": "d3ca7323-cc89-4d32-a40a-754329113ae7",
+            "owner": "vale",
+            "cents": 9100,
+            "purpose": "Airport transfer",
+            "status": "pending"
+          }
+        ],
+        "observed_events": []
+      }
+    },
+    {
+      "fault": "self-approval",
+      "detected": true,
+      "failing_cases": 2,
+      "witness": {
+        "case": "mara/approve/mara",
+        "request": "POST /claims/adf72f05-60b7-494d-846a-c96691ea6ee0/approve",
+        "expected_status": 403,
+        "actual_status": 200,
+        "violations": [
+          "status",
+          "response body",
+          "claim state",
+          "approval journal"
+        ],
+        "expected_body": {
+          "error": "forbidden"
+        },
+        "actual_body": {
+          "id": "adf72f05-60b7-494d-846a-c96691ea6ee0",
+          "status": "approved"
+        },
+        "observed_events": [
+          {
+            "claim_id": "adf72f05-60b7-494d-846a-c96691ea6ee0",
+            "reviewer": "mara"
+          }
+        ]
+      }
+    },
+    {
+      "fault": "private-field",
+      "detected": true,
+      "failing_cases": 10,
+      "witness": {
+        "case": "lee/read/lee",
+        "request": "GET /claims/a391f982-7f70-4df2-9099-e8a040b70b4d",
+        "expected_status": 200,
+        "actual_status": 200,
+        "violations": [
+          "response body"
+        ],
+        "expected_body": {
+          "id": "a391f982-7f70-4df2-9099-e8a040b70b4d",
+          "owner": "lee",
+          "cents": 16400,
+          "purpose": "Rail fare",
+          "status": "pending"
+        },
+        "actual_body": {
+          "id": "a391f982-7f70-4df2-9099-e8a040b70b4d",
+          "owner": "lee",
+          "cents": 16400,
+          "purpose": "Rail fare",
+          "status": "pending",
+          "internal_note": "sample-review-A"
+        },
+        "observed_events": []
+      }
+    }
+  ]
+}
