@@ -1,0 +1,392 @@
+{
+  "total": 55,
+  "passed": 55,
+  "failed": 0,
+  "cases": [
+    {
+      "case": "guest/list/all",
+      "request": "GET /claims",
+      "expected_status": 401,
+      "actual_status": 401,
+      "violations": []
+    },
+    {
+      "case": "guest/read/lee",
+      "request": "GET /claims/a391f982-7f70-4df2-9099-e8a040b70b4d",
+      "expected_status": 401,
+      "actual_status": 401,
+      "violations": []
+    },
+    {
+      "case": "guest/approve/lee",
+      "request": "POST /claims/a391f982-7f70-4df2-9099-e8a040b70b4d/approve",
+      "expected_status": 401,
+      "actual_status": 401,
+      "violations": []
+    },
+    {
+      "case": "guest/read/mara",
+      "request": "GET /claims/adf72f05-60b7-494d-846a-c96691ea6ee0",
+      "expected_status": 401,
+      "actual_status": 401,
+      "violations": []
+    },
+    {
+      "case": "guest/approve/mara",
+      "request": "POST /claims/adf72f05-60b7-494d-846a-c96691ea6ee0/approve",
+      "expected_status": 401,
+      "actual_status": 401,
+      "violations": []
+    },
+    {
+      "case": "guest/read/oren",
+      "request": "GET /claims/b6ea1a07-335e-44ca-8450-a332f5b36da0",
+      "expected_status": 401,
+      "actual_status": 401,
+      "violations": []
+    },
+    {
+      "case": "guest/approve/oren",
+      "request": "POST /claims/b6ea1a07-335e-44ca-8450-a332f5b36da0/approve",
+      "expected_status": 401,
+      "actual_status": 401,
+      "violations": []
+    },
+    {
+      "case": "guest/read/vale",
+      "request": "GET /claims/d3ca7323-cc89-4d32-a40a-754329113ae7",
+      "expected_status": 401,
+      "actual_status": 401,
+      "violations": []
+    },
+    {
+      "case": "guest/approve/vale",
+      "request": "POST /claims/d3ca7323-cc89-4d32-a40a-754329113ae7/approve",
+      "expected_status": 401,
+      "actual_status": 401,
+      "violations": []
+    },
+    {
+      "case": "guest/read/missing",
+      "request": "GET /claims/00000000-0000-4000-8000-000000000000",
+      "expected_status": 401,
+      "actual_status": 401,
+      "violations": []
+    },
+    {
+      "case": "guest/approve/missing",
+      "request": "POST /claims/00000000-0000-4000-8000-000000000000/approve",
+      "expected_status": 401,
+      "actual_status": 401,
+      "violations": []
+    },
+    {
+      "case": "lee/list/all",
+      "request": "GET /claims",
+      "expected_status": 200,
+      "actual_status": 200,
+      "violations": []
+    },
+    {
+      "case": "lee/read/lee",
+      "request": "GET /claims/a391f982-7f70-4df2-9099-e8a040b70b4d",
+      "expected_status": 200,
+      "actual_status": 200,
+      "violations": []
+    },
+    {
+      "case": "lee/approve/lee",
+      "request": "POST /claims/a391f982-7f70-4df2-9099-e8a040b70b4d/approve",
+      "expected_status": 403,
+      "actual_status": 403,
+      "violations": []
+    },
+    {
+      "case": "lee/read/mara",
+      "request": "GET /claims/adf72f05-60b7-494d-846a-c96691ea6ee0",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "lee/approve/mara",
+      "request": "POST /claims/adf72f05-60b7-494d-846a-c96691ea6ee0/approve",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "lee/read/oren",
+      "request": "GET /claims/b6ea1a07-335e-44ca-8450-a332f5b36da0",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "lee/approve/oren",
+      "request": "POST /claims/b6ea1a07-335e-44ca-8450-a332f5b36da0/approve",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "lee/read/vale",
+      "request": "GET /claims/d3ca7323-cc89-4d32-a40a-754329113ae7",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "lee/approve/vale",
+      "request": "POST /claims/d3ca7323-cc89-4d32-a40a-754329113ae7/approve",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "lee/read/missing",
+      "request": "GET /claims/00000000-0000-4000-8000-000000000000",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "lee/approve/missing",
+      "request": "POST /claims/00000000-0000-4000-8000-000000000000/approve",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "mara/list/all",
+      "request": "GET /claims",
+      "expected_status": 200,
+      "actual_status": 200,
+      "violations": []
+    },
+    {
+      "case": "mara/read/lee",
+      "request": "GET /claims/a391f982-7f70-4df2-9099-e8a040b70b4d",
+      "expected_status": 200,
+      "actual_status": 200,
+      "violations": []
+    },
+    {
+      "case": "mara/approve/lee",
+      "request": "POST /claims/a391f982-7f70-4df2-9099-e8a040b70b4d/approve",
+      "expected_status": 200,
+      "actual_status": 200,
+      "violations": []
+    },
+    {
+      "case": "mara/read/mara",
+      "request": "GET /claims/adf72f05-60b7-494d-846a-c96691ea6ee0",
+      "expected_status": 200,
+      "actual_status": 200,
+      "violations": []
+    },
+    {
+      "case": "mara/approve/mara",
+      "request": "POST /claims/adf72f05-60b7-494d-846a-c96691ea6ee0/approve",
+      "expected_status": 403,
+      "actual_status": 403,
+      "violations": []
+    },
+    {
+      "case": "mara/read/oren",
+      "request": "GET /claims/b6ea1a07-335e-44ca-8450-a332f5b36da0",
+      "expected_status": 200,
+      "actual_status": 200,
+      "violations": []
+    },
+    {
+      "case": "mara/approve/oren",
+      "request": "POST /claims/b6ea1a07-335e-44ca-8450-a332f5b36da0/approve",
+      "expected_status": 200,
+      "actual_status": 200,
+      "violations": []
+    },
+    {
+      "case": "mara/read/vale",
+      "request": "GET /claims/d3ca7323-cc89-4d32-a40a-754329113ae7",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "mara/approve/vale",
+      "request": "POST /claims/d3ca7323-cc89-4d32-a40a-754329113ae7/approve",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "mara/read/missing",
+      "request": "GET /claims/00000000-0000-4000-8000-000000000000",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "mara/approve/missing",
+      "request": "POST /claims/00000000-0000-4000-8000-000000000000/approve",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "oren/list/all",
+      "request": "GET /claims",
+      "expected_status": 200,
+      "actual_status": 200,
+      "violations": []
+    },
+    {
+      "case": "oren/read/lee",
+      "request": "GET /claims/a391f982-7f70-4df2-9099-e8a040b70b4d",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "oren/approve/lee",
+      "request": "POST /claims/a391f982-7f70-4df2-9099-e8a040b70b4d/approve",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "oren/read/mara",
+      "request": "GET /claims/adf72f05-60b7-494d-846a-c96691ea6ee0",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "oren/approve/mara",
+      "request": "POST /claims/adf72f05-60b7-494d-846a-c96691ea6ee0/approve",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "oren/read/oren",
+      "request": "GET /claims/b6ea1a07-335e-44ca-8450-a332f5b36da0",
+      "expected_status": 200,
+      "actual_status": 200,
+      "violations": []
+    },
+    {
+      "case": "oren/approve/oren",
+      "request": "POST /claims/b6ea1a07-335e-44ca-8450-a332f5b36da0/approve",
+      "expected_status": 403,
+      "actual_status": 403,
+      "violations": []
+    },
+    {
+      "case": "oren/read/vale",
+      "request": "GET /claims/d3ca7323-cc89-4d32-a40a-754329113ae7",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "oren/approve/vale",
+      "request": "POST /claims/d3ca7323-cc89-4d32-a40a-754329113ae7/approve",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "oren/read/missing",
+      "request": "GET /claims/00000000-0000-4000-8000-000000000000",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "oren/approve/missing",
+      "request": "POST /claims/00000000-0000-4000-8000-000000000000/approve",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "vale/list/all",
+      "request": "GET /claims",
+      "expected_status": 200,
+      "actual_status": 200,
+      "violations": []
+    },
+    {
+      "case": "vale/read/lee",
+      "request": "GET /claims/a391f982-7f70-4df2-9099-e8a040b70b4d",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "vale/approve/lee",
+      "request": "POST /claims/a391f982-7f70-4df2-9099-e8a040b70b4d/approve",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "vale/read/mara",
+      "request": "GET /claims/adf72f05-60b7-494d-846a-c96691ea6ee0",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "vale/approve/mara",
+      "request": "POST /claims/adf72f05-60b7-494d-846a-c96691ea6ee0/approve",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "vale/read/oren",
+      "request": "GET /claims/b6ea1a07-335e-44ca-8450-a332f5b36da0",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "vale/approve/oren",
+      "request": "POST /claims/b6ea1a07-335e-44ca-8450-a332f5b36da0/approve",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "vale/read/vale",
+      "request": "GET /claims/d3ca7323-cc89-4d32-a40a-754329113ae7",
+      "expected_status": 200,
+      "actual_status": 200,
+      "violations": []
+    },
+    {
+      "case": "vale/approve/vale",
+      "request": "POST /claims/d3ca7323-cc89-4d32-a40a-754329113ae7/approve",
+      "expected_status": 403,
+      "actual_status": 403,
+      "violations": []
+    },
+    {
+      "case": "vale/read/missing",
+      "request": "GET /claims/00000000-0000-4000-8000-000000000000",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    },
+    {
+      "case": "vale/approve/missing",
+      "request": "POST /claims/00000000-0000-4000-8000-000000000000/approve",
+      "expected_status": 404,
+      "actual_status": 404,
+      "violations": []
+    }
+  ]
+}
