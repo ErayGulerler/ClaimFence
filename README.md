@@ -8,7 +8,7 @@ Mara reviews expenses at North. She can approve Lee's rail fare, but she cannot 
 
 ## Run it
 
-Extract the ZIP and open a terminal in the folder containing this README. Use Python 3.11 or newer with SQLite support. All dependencies are in the standard library. Each run starts temporary servers on the loopback interface and creates fresh synthetic data.
+Open a terminal in the repository root. Use Python 3.11 or newer with SQLite support. All dependencies are in the standard library. Each run starts temporary servers on the loopback interface and creates fresh synthetic data.
 
 ```sh
 python verify.py
@@ -43,8 +43,6 @@ An invisible or missing claim returns the same 404 body. A person who can see a 
 - [Threat model](docs/threat-model.md) records trust boundaries, business impact and scope.
 - [Matrix evidence](evidence/matrix.json) and [mutation evidence](evidence/mutations.json) contain the machine-readable results. Run `python verify.py` to regenerate both.
 
-## Portfolio description
+## Scope
 
-**ClaimFence | API authorization and security testing.** Tested tenant isolation and separation of duties in a Python expense API. Built a 55-case HTTP authorization matrix that detected four seeded regressions, and verified that concurrent approvals create a single journal entry.
-
-This is a local portfolio lab using fictional customers and expenses. The measurements describe its test suite.
+ClaimFence is a local lab. All customers and expenses are fictional, and the measurements describe its own test suite rather than a production service.
